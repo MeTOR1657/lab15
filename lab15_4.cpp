@@ -18,4 +18,16 @@ int main(){
 	return 0;
 }
 
-//Do not modify source code above this line
+#include <algorithm>
+#include <array>
+using namespace std;
+
+void shuffle(int &a, int &b, int &c, int &d) {
+    array<int, 4> values = {a, b, c, d};
+    random_shuffle(values.begin(), values.end());
+    a = values[0];
+    b = values[1];
+    c = values[2];
+    d = values[3];
+}
+
